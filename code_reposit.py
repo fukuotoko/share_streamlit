@@ -32,7 +32,7 @@ def main():
     st.header("保存されたコード一覧")
     saved_codes = cursor.execute("SELECT title, code FROM code_snippets").fetchall()
     for i, (title, code) in enumerate(saved_codes):
-        st.write(f"## コード {i+1}: {title}")
+        st.write(f"## {title}")  # タイトルのみ表示
         st.code(code)
 
 # アプリの実行
